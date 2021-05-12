@@ -29,3 +29,8 @@ ggplot() +
   geom_raster(data = DSM_HARV_df, aes(x=x, y=y, fill=fct_elevation_2)) +
   coord_quickmap()
 
+# plot with nicer colors
+terrain.colors(3)
+ggplot() +
+  geom_raster(data = DSM_HARV_df, aes(x=x, y=y, fill=fct_elevation_2, ))
+
